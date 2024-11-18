@@ -1,12 +1,12 @@
 #!/bin/bash
 
-#   Install nala:
+#   Update and install nala:
 sudo apt-get update && sudo apt-get upgrade -y
 sudo apt-get install -y nala
-#   Update the system:
+#   Add repos and install basic utilities:
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 sudo nala update && sudo nala upgrade -y
-#   Install curl:
-sudo nala install -y curl
+sudo nala install -y fastfetch konsole sl curl wget
 #   Pihole install prompt:
 clear
 echo "Would you like to begin the pihole installation? (y/n)"
