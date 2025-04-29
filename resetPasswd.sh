@@ -8,7 +8,7 @@ if [[ $resetpwState == "y" || $resetpwState == "Y" ]]; then
     echo "Enter your new password."
     read PiHolePassword
     #   Reset pihole password:
-    pihole -a -p $PiHolePassword
+    sudo pihole setpassword $PiHolePassword
     echo "You have reset your pihole password to [$PiHolePassword]."
 else
     echo "The pihole password was NOT reset at this time."
